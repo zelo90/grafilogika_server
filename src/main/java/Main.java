@@ -35,7 +35,7 @@ public class Main extends HttpServlet {
       stmt.executeUpdate("INSERT INTO ticks VALUES (now())");
       ResultSet rs = stmt.executeQuery("SELECT tick FROM ticks");
 
-      String out = "Hello!\n";
+      String out = "Hello from Java witd DataBase!\n";
       while (rs.next()) {
           out += "Read from DB: " + rs.getTimestamp("tick") + "\n";
       }
